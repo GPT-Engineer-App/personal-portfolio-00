@@ -3,7 +3,7 @@ import Index from "./pages/Index.jsx";
 
 function App() {
   return (
-    <Router>
+    <Router style={{ alignItems: "flex-start" }}>
       <Routes>
         <Route exact path="/" element={<Index />} />
       </Routes>
