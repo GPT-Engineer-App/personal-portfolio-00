@@ -1,17 +1,21 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, Text, VStack, Box, Heading, Button, Image, Flex } from "@chakra-ui/react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Index = () => {
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+      <VStack spacing={8} align="center">
+        <Box boxSize="150px">
+          <Image src="/path/to/your/profile-picture.jpg" alt="Profile Picture" borderRadius="full" boxSize="150px" />
+        </Box>
+        <Heading as="h1" size="2xl">John Doe</Heading>
+        <Text fontSize="lg" textAlign="center">Full Stack Developer | JavaScript Enthusiast | Open Source Contributor</Text>
+        <Flex justify="center" width="100%" mt={4}>
+          <Button as="a" href="https://github.com/yourusername" target="_blank" leftIcon={<FaGithub />} m={2}>GitHub</Button>
+          <Button as="a" href="https://linkedin.com/in/yourusername" target="_blank" leftIcon={<FaLinkedin />} m={2}>LinkedIn</Button>
+          <Button as="a" href="https://twitter.com/yourusername" target="_blank" leftIcon={<FaTwitter />} m={2}>Twitter</Button>
+        </Flex>
+        <Button colorScheme="teal" size="lg" mt={8}>Get in Touch</Button>
       </VStack>
     </Container>
   );
